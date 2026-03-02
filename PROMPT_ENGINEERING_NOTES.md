@@ -123,7 +123,7 @@ A instrução de "não entregar nada antes nem depois" é crítica: evita que o 
 
 ---
 
-## Comparação entre Versões de Prompt
+## 3. Comparação entre Versões de Prompt
 
 ### Prompt simples (sem técnicas)
 ```
@@ -140,7 +140,7 @@ Nota-se que a diferença de qualidade entre as duas versões é significativa es
 
 ---
 
-## Progressão Cognitiva e Arquitetura Pedagógica
+## 4. Progressão Cognitiva e Arquitetura Pedagógica
 
 ### Taxonomia de Bloom Implícita
 
@@ -171,7 +171,7 @@ Essa modularidade permite que cada prompt seja otimizado para seu objetivo espec
 
 ---
 
-## Análise Comparativa: Prompt Simples vs. Prompt Otimizado
+## 5. Análise Comparativa: Prompt Simples vs. Prompt Otimizado
 
 O teste foi realizado com o mesmo tópico em ambas as versões:
 - **Tópico:** Engenharia de Prompt
@@ -229,18 +229,10 @@ O output do prompt simples também foi consideravelmente mais longo e denso, o q
 
 ---
 
-5. Conclusão
+## 6. Conclusão
 
-O foco deste projeto foi demonstrar que engenharia de prompt não é apenas escrever instruções longas, mas:
+O foco deste projeto foi demonstrar que engenharia de prompt não é apenas escrever instruções longas — é uma disciplina de design que exige intenção em cada escolha.
 
-Controlar estrutura
+Os prompts do EducAI foram construídos para controlar estrutura, reduzir ambiguidade, modularizar objetivos e aplicar princípios pedagógicos reais. Cada técnica utilizada tem uma justificativa clara: a persona direciona o comportamento do modelo, o context setting personaliza o output, o chain-of-thought garante progressão lógica, e o output formatting elimina ruído desnecessário.
 
-Reduzir ambiguidade
-
-Modularizar objetivos
-
-Aplicar princípios pedagógicos
-
-Criar consistência entre diferentes tipos de geração
-
-O sistema final não gera apenas conteúdo — ele gera conteúdo educacional adaptativo com arquitetura cognitiva definida.
+O resultado é um sistema que gera conteúdo educacional adaptativo, com arquitetura cognitiva definida e experiência calibrada para cada aluno.
