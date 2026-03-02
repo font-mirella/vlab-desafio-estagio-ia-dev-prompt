@@ -19,19 +19,47 @@ for i in range(len(lista_alunos)):
 aluno = None
 
 while not aluno:
-    entrada = input("Digite o nome do perfil desejado: \n")
+    entrada = input("Digite o nome do perfil desejado ou 'novo' para cadastrar um perfil: ")
 
-    for i in range(len(lista_alunos)):
-        if entrada.lower() == lista_alunos[i]['nome'].lower():
-            aluno = lista_alunos[i]
+    if entrada.lower().strip() == "novo":
+        print("\n" + "-"*40)
+        print("➕ Deseja criar um perfil novo? Escreva aqui!")
+        print("-"*40 + "\n")
         
-    if not aluno:
-        print("Aluno não encontrado. Por favor, digite novamente.")
+        novo_nome = input("Nome do estudante: ").strip()
+        novo_idade = int(input("Idade: "))
+        novo_nivel = input("Nível de conhecimento (iniciante, intermediário, avançado): ").strip().lower()
+        novo_estilo = input("Estilo de aprendizado (visual, auditivo, cinestésico, leitura/escrita): ").strip().lower()
+        
+        novo_perfil = {
+            "nome": novo_nome,
+            "idade": novo_idade,
+            "nivel": novo_nivel,
+            "estilo_aprendizado": novo_estilo
+        }
+        
+        # add na lista e att
+        lista_alunos.append(novo_perfil)
+        with open("data/alunos.json", "w", encoding="utf-8") as arquivo_aluno_novo:
+            json.dump(lista_alunos, arquivo_aluno_novo, ensure_ascii=False, indent=4)
+            
+        print(f"\n✅ O perfil de {novo_nome} foi salvo.")
+        
+        # define o aluno novo como o escolhido para continuar
+        aluno = novo_perfil
+    else: 
+
+        for i in range(len(lista_alunos)):
+            if entrada.lower() == lista_alunos[i]['nome'].lower():
+                aluno = lista_alunos[i]
+            
+        if not aluno:
+            print("Aluno não encontrado. Por favor, digite novamente.")
 
 conteudo = ""
 
-print("Qual conteúdo você deseja estudar?")
-conteudo = input("Digite o conteúdo desejado: \n")
+print("\nQual conteúdo você deseja estudar?")
+conteudo = input("Digite o conteúdo desejado: ")
 
 # registro de respostas existentes
 try:
@@ -122,7 +150,6 @@ else:
     except errors.APIError as e:
         print(f"\n[ERRO] Falha na comunicação com a API. Detalhes: {e}\nPor favor, tente novamente")
         exit()
-        
     except Exception as e:
         print(f"\n[ERRO] Ocorreu um problema inesperado: {e}")
         exit()
