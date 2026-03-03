@@ -2,6 +2,8 @@
 
 Plataforma educativa que gera conteúdo didático hiper-personalizado com base no perfil do aluno, utilizando a API **Google Gemini** e técnicas avançadas de engenharia de prompt.
 
+🚀 **[CLIQUE AQUI PARA ACESSAR O APP ONLINE](https://api-educational-prompt-engineering.streamlit.app/)**
+
 ---
 
 ## 🎯 O que o projeto faz
