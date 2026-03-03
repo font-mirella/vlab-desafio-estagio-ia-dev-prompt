@@ -10,7 +10,7 @@ from motor_prompts import gerar_perguntas
 from motor_prompts import gerar_resumo
 
 # configuração da página
-st.set_page_config(page_title="Gerador de Aulas", page_icon="📚", layout="centered")
+st.set_page_config(page_title="EducAI", page_icon="📚", layout="centered")
 
 st.title("📚 EducAI")
 st.markdown("Para gerar materiais educativos hiper-personalizados com base no seu perfil ;).")
